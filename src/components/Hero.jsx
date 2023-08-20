@@ -13,14 +13,14 @@ const Hero = () => {
 <section id='home' className={`flex md:flex-row flex-col  sm:flex lg:ml-0 sm:ml-[100px] sm:justify-center `}>
   <div className={`flex-1 flex-col md:ml-20 lg:ml-20 xl:px-0 sm:px-10 px-4`}>
     <div className='flex items-center justify-center md:justify-start'>
-      <p className='text-white mt-10 -mb-5 lg:mt-2 text-[18px]'>
+      <p className='text-white -mb-5 md:-mb-20 lg:-mb-20 lg:mt-2 text-[18px]'>
         <span className='text-[#FF1a1a] text-[23px]'> Hello</span>, my name is Trae
       </p>
     </div>
-    <div className="flex flex-col sm:flex-row  lg:mt-2 ">
-      <div className="flex flex-col font-poppins font-semibold sm:mt-[5px] md:mt-[5px] sm:text-[20px] lg:text-[35px] text-white ss:leading-[100px] leading-[75px] "> <br className="sm:block hidden" /> {'  '}
+    <div className="flex flex-col sm:flex-row ">
+      <div className="flex flex-col font-poppins font-semibold sm:mt-[5px] sm:text-[20px] lg:text-[35px] text-white ss:leading-[100px] leading-[75px] "> <br className="sm:block hidden" /> {'  '}
         <motion.span animate={{ scale: [0, 1, 0.5, 1] }} transition={{ easeInOut: 0.05, duration: 1.5 }} className="text-gradient font-poppins lg:mb-2 sm:mt-[-30px] flex justify-center">I am a Full-Stack Developer.. </motion.span>
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ staggerChildren: 0.5, ease: 'easeIn', duration: 2.5, delay: 2.5 }} className='flex m-1 justify-center lg:ml-[100px] sm:ml-0'>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ staggerChildren: 0.5, ease: 'easeIn', duration: 2.5, delay: 2.5 }} className='flex m-1 justify-center sm:ml-0'>
           <img src={react} className='w-[40px] m-2 -mt-3' />
           <img src={python} className='w-[40px] m-2 -mt-3' />
           <img src={flutter} className='w-[40px] m-2 -mt-3' />
