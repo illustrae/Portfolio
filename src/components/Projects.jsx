@@ -19,10 +19,10 @@ const Projects = () => {
             link: 'https://github.com/illustrae/RnMTriviaGame'
         },
         {
-            title: "In progress...",
+            title: "Covert Chat",
             media: 'youtube',
-            source: "https://cdn.pixabay.com/photo/2019/12/17/14/43/christmas-4701783__340.png",
-            content: "This project is currently in progress. Will be added soon."
+            source: "https://youtu.be/oVRLuUqN9FY",
+            content: "Messenger and Chat App, Python, Flask, SocketIO. Validations, Login and Registration."
         },
 
     ];
