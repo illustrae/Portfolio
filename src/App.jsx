@@ -22,7 +22,7 @@ const date = <span> {new Date().getFullYear()} &copy; All Rights Reserved</span>
       </section>
 
       <section id='home' className={`bg-black file:flex items-center justify-center h-screen ${styles.flexStart}`}>
-        <div className={`mt-40`}>
+        <div className={`mt-30`}>
           <About />
         </div>
       </section>
