@@ -8,7 +8,7 @@ import python from './python.svg'
 import java from './java.svg'
 import tailwind from './tailwind.svg'
 import flutter from './flutter.svg'
-import resume from './traeSWResume.pdf'
+import resume from './TraeDevResume.pdf'
 
 
 
