@@ -1,14 +1,14 @@
 import menu from "./menu.svg";
 import close from "./close.svg";
 import logo from "./logo.svg";
-import me from "./me.jpg"
+import me from "./me.png"
 import github from "./github.svg";
 import react from './react.svg'
 import python from './python.svg'
 import java from './java.svg'
 import tailwind from './tailwind.svg'
 import flutter from './flutter.svg'
-import resume from './TraeDevResume.pdf'
+import resume from './TraeHughesResume.pdf'
 
 
 

@@ -7,21 +7,21 @@ const Projects = () => {
         {
             title: "AIsop Adventure",
             media: 'youtube',
-            source: 'https://youtu.be/PcnobSawn_0',
+            source: '',
             content: "OpenAI, Vite-React - Frontend, Python/Flask - Backend, Redux, MySQL, Tailwindcss, Git",
             link: 'https://Aisop.io'
         },
         {
             title: "Rick & Morty Trivia",
             media: 'youtube',
-            source: "https://www.youtube.com/watch?v=lqjzcVGT-7g",
+            source: "",
             content: "RestAPI, Vite-React, Tailwindcss, NoSQL, Frontend and Backend Validations. Login and Reg Authentication.",
-            link: 'https://github.com/illustrae/RnMTriviaGame'
+            link: ''
         },
         {
             title: "Covert Chat",
             media: 'youtube',
-            source: "https://youtu.be/oVRLuUqN9FY",
+            source: "",
             content: "Messenger and Chat App, Python, Flask, SocketIO. Validations, Login and Registration."
         },
 
@@ -45,13 +45,16 @@ const Projects = () => {
                             </div>
                         )}
                         <div className="p-4 lg:m-2 h-[200px] sm:mt-3">
+                            
                             <h4 className="text-xl drop-shadow-md bg-white p-1 mb-2 rounded-full text-center font-semibold text-[#ae1c1c]">
 
                                 {items.title}
                             </h4>
+
                             <p className="mb-2 text-white h-[60px] leading-normal">
                                 {items.content}
                             </p>
+
                             <a href={items.link} target="_blank" rel="noopener noreferrer" className='relative inset-x-1 top-8 sm:relative sm:inset-x-1 sm:top-6'>
                                 <img src={github} className='w-[40px]' />
                             </a>

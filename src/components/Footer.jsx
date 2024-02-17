@@ -1,8 +1,9 @@
 import React from 'react'
 
 const Footer = () => {
+  const date = <span> {new Date().getFullYear()} &copy; All Rights Reserved</span>
   return (
-    <div className='h-[40px] flex justify-center'>Footer</div>
+    <div className='h-[40px] flex justify-center'>{date}</div>
   )
 }
 

@@ -12,7 +12,13 @@ export default {
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        grilla:["Protest Guerrilla", "sans-serif"],
       },
+      backgroundImage: {
+        'hero': "url('../portfolio/src/assets/background.jpg')",
+        
+      },
+    
     },
     // screens: {
     //   xs: "480px",
