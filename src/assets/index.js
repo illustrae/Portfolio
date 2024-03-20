@@ -13,6 +13,7 @@ import aisopProject from './aisopproject.png'
 import rickMorty from './rickmortytriv.png'
 import passGen from './passGen.png'
 import docuComp from './docuCompany.png'
+import dataViz from './dataviz.png'
 
 
 
@@ -32,5 +33,6 @@ export {
     rickMorty,
     passGen,
     docuComp
+    dataViz
 
 }

@@ -10,6 +10,14 @@ export const projectsList = [
         description: "AI text based multiplayer game."
     },
     {
+        image: dataViz,
+        project_name: "DataViz",
+        contribution: "Fullstack",
+        tech: "React, Python, DjangoRest, MongoDB + Atlas, Tailwind",
+        url: "https://github.com/justinacgray/DataViz_Project",
+        description: "Application to Clean Dataframes with a friendly UI for easy use."
+    },
+    {
         image: rickMorty,
         project_name: "Rick & Morty Trivia",
         contribution: "Fullstack",
