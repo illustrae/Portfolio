@@ -1,4 +1,4 @@
-import { aisopProject, docuComp, rickMorty, passGen } from '../../assets'
+import { aisopProject, docuComp, rickMorty, passGen, dataViz } from '../../assets'
 
 export const projectsList = [
     {
