@@ -32,7 +32,7 @@ export {
     aisopProject,
     rickMorty,
     passGen,
-    docuComp
+    docuComp,
     dataViz
 
 }
