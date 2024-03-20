@@ -7,7 +7,7 @@ import { useState } from 'react'
 const App = () => {
   const [activeSectionIndex, setActiveSectionIndex] = useState(0);
 
-  const sectionIds = ['hm-hero','hm-about', 'hm-project'];
+  const sectionIds = ['hm-hero','hm-about'];
 
 
   const scrollToNextSection = () => {
@@ -34,8 +34,8 @@ const App = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
+      
       <div className="bg-[#ffffff] flex-grow">
-
         <div className={`bg-[#ae1c1c]`}>
           <div className={``}>
             <h1><Marquee /></h1>
@@ -43,24 +43,14 @@ const App = () => {
         </div>
 
         <section id='hm-hero' className={` file:flex items-center justify-center h-screen ${styles.flexStart}`}>
-          <div className={``}>
             <Hero />
-          </div>
         </section>
-
-
-        <section id='hm-about' className={` file:flex items-center  justify-center h-screen ${styles.flexStart}`}>
-          <div className={`mt-64`}>
+        <section id='hm-about' className={`file:flex items-center justify-center h-screen ${styles.flexStart}`}>
             <About />
-          </div>
-        </section>
-
-        <section id='hm-project' className={` h-full w-full mb-20`}>
-          <Projects />
         </section>
 
       </div>
-      <div className="fixed right-0 lg:mr-40 md:mr-10 mr-24 bottom-0">
+      <div className="fixed bottom-0 right-0 mr-24 lg:mr-40 md:mr-10">
         <div className="arrow-container animated fadeInDown" id='scroll-btn' onClick={scrollToNextSection}>
           <div className="arrow-2">
           {isLastSection ? <i className="fa fa-angle-up"></i> : <i className="fa fa-angle-down"></i>}

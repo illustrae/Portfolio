@@ -1,74 +1,76 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { motion } from "framer-motion";
-
+import PortSlider from './PortSlider';
 
 const About = () => {
-  const [moveUp, setMoveUp] = useState(false);
-  const [moveDown, setMoveDown] = useState(false);
+  const [aboutExpanded, setAboutExpanded] = useState(false);
+  const [portfolioExpanded, setPortfolioExpanded] = useState(false);
 
   const handleAboutClick = () => {
-    setMoveUp(!moveUp);
-    setMoveDown(false);
+    setAboutExpanded(!aboutExpanded);
+    setPortfolioExpanded(false);
   };
 
   const handlePortfolioClick = () => {
-    setMoveDown(!moveDown);
-    setMoveUp(false);
+    setAboutExpanded(false);
+    setPortfolioExpanded(!portfolioExpanded);
   };
+
   return (
-    <div id="about" className='h-screen w-full p-7 md:mt-10 relative'>
-      <div className='flex flex-col h-full items-center justify-center'>
-        <div id="about" className={`section font-grilla text-3xl md:text-5xl mt-64 md:mt-0 ${moveUp ? 'move-up' : ''}`}
+    <div className='flex items-center justify-center w-full h-screen p-7 md:mt-10'>
+      <div className='flex flex-col items-center justify-center mx-auto mt-10'>
+        <div
+          id="about"
+          className={`section font-grilla text-3xl md:text-5xl mt-10 md:mt-0 ${aboutExpanded ? 'move-up' : ''}`}
           onClick={handleAboutClick}>
           ABOUT
         </div>
-        <div>
-          {moveUp && (
-            <div className={`circles flex flex-col mt-48 md:mt-0 md:flex-row ${moveUp || moveDown ? 'active' : ''}`}>
-              <motion.div
-                className="circle m-2"
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                  duration: 0.8,
-                  delay: 0.5,
-                  ease: [0, 0.71, 0.2, 1.01]
-                }}
-              />
-              <motion.div
-                className="circle m-2"
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                  duration: 0.8,
-                  delay: 0.7,
-                  ease: [0, 0.71, 0.2, 1.01]
-                }}
-              />
-              <motion.div
-                className="circle m-2"
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                  duration: 0.8,
-                  delay: 0.9,
-                  ease: [0, 0.71, 0.2, 1.01]
-                }}
-              />
+        {aboutExpanded && (
+          <motion.div
+            className="flex flex-col circles md:mt-0 md:flex-row"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.5,
+              ease: [0, 0.71, 0.2, 1.01]
+            }}
+          >
+            <div className="m-2 circle ">
+              <div className="p-10 mx-3 my-8 text-sm font-semibold text-center text-white">
+              I'm a passionate software developer with a deep love for art and video games. Creativity fuels my work, driving me to seek out diverse and dynamic environments where I can thrive. With a background in software development, I bring a unique blend of technical expertise and creative thinking to every project. I'm known for my perseverance, outgoing nature, and humble demeanor, always ready to tackle new challenges with enthusiasm and drive.
+              </div>
             </div>
-          )}
-        </div>
+          </motion.div>
+        )}
 
         <div
           id="portfolio"
-          className={`section font-grilla text-3xl md:text-5xl ${moveDown ? 'move-down' : ''}`}
+          className={`section font-grilla text-3xl md:text-5xl md:mt-0 ${portfolioExpanded ? 'move-down' : ''}`}
           onClick={handlePortfolioClick}> PORTFOLIO
         </div>
+        {portfolioExpanded && (
+          <motion.div
+            className="flex flex-col md:mt-0 md:flex-row"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.5,
+              ease: [0, 0.71, 0.2, 1.01]
+            }}
+            
+          >
+            <PortSlider />
 
-        {/* <p className='text-white'> <br />As a forward-thinking software developer, finding the right company is paramount to me. I'm not simply pursuing employment; I'm on a quest to join a community that cherishes diversity and inclusivity as deeply as I do. I firmly believe that embracing diverse perspectives is fundamental to revolutionizing the tech sector, and I'm enthusiastic about leveraging my own distinct background in this endeavor. My ultimate objective is to play a pivotal role in crafting innovative solutions that generate meaningful and positive change in the world. </p> */}
+          </motion.div>
+
+
+        )}
       </div>
     </div>
   )
 }
 
-export default About
+export default About;
+

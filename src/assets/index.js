@@ -9,6 +9,10 @@ import java from './java.svg'
 import tailwind from './tailwind.svg'
 import flutter from './flutter.svg'
 import resume from './TraeHughesResume.pdf'
+import aisopProject from './aisopproject.png'
+import rickMorty from './rickmortytriv.png'
+import passGen from './passGen.png'
+import docuComp from './docuCompany.png'
 
 
 
@@ -23,6 +27,10 @@ export {
     java,
     flutter,
     tailwind,
-    resume
+    resume,
+    aisopProject,
+    rickMorty,
+    passGen,
+    docuComp
 
 }
