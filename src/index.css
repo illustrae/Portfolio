@@ -28,8 +28,9 @@
 .text-gradient {
   background: radial-gradient(
     circle at center,
-    #ae1c1c,
-    #070064
+    #c0c0c0,
+    #24a9c0
+    
 );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -264,3 +265,12 @@
 .slick-arrow.slick-next::before {
   color: #070064;
 }
+
+
+hr {
+    height: 3px; 
+    width: 30%; 
+    background-color: #c0c0c0; /* Set the color */
+    border: none; 
+    margin: 10px 1px; /* Adjust margin for centering */
+  }

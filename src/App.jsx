@@ -1,13 +1,11 @@
 import styles from './style'
 import { Navbar, Hero, Projects, About, Footer } from "./components"
-import Marquee from './components/Marquee'
 import { useState } from 'react'
 
 
 const App = () => {
   const [activeSectionIndex, setActiveSectionIndex] = useState(0);
-
-  const sectionIds = ['hm-hero','hm-about'];
+  const sectionIds = ['hm-hero','hm-projects', 'hm-about'];
 
 
   const scrollToNextSection = () => {
@@ -34,22 +32,24 @@ const App = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      
-      <div className="bg-[#ffffff] flex-grow">
-        <div className={`bg-[#ae1c1c]`}>
-          <div className={``}>
-            <h1><Marquee /></h1>
-          </div>
+      <div className="bg-[url('./assets/bgCode.jpg')] bg-center bg-no-repeat flex-grow" style={{ backgroundSize: 'cover', minHeight: '200px' }} >
+        <div className={`bg-[#05030cc9]`}>
+          <Navbar />
         </div>
 
-        <section id='hm-hero' className={` file:flex items-center justify-center h-screen ${styles.flexStart}`}>
+        <section id='hm-hero' className={` bg-[#05030cc9] file:flex justify-center h-screen ${styles.flexStart}`}>
             <Hero />
         </section>
-        <section id='hm-about' className={`file:flex items-center justify-center h-screen ${styles.flexStart}`}>
-            <About />
+
+        <section id='hm-projects' className={`file:flex bg-[#030411] sm:items-center sm:justify-center sm:h-screen ${styles.flexStart}`}>
+            <Projects />
         </section>
 
+        <section id='hm-about' className={`file:flex bg-[#05030cc9] sm:items-center sm:justify-center sm:h-screen ${styles.flexStart}`}>
+            <About />
+        </section>
       </div>
+
       <div className="fixed bottom-0 right-0 mr-24 lg:mr-40 md:mr-10">
         <div className="arrow-container animated fadeInDown" id='scroll-btn' onClick={scrollToNextSection}>
           <div className="arrow-2">
@@ -59,7 +59,7 @@ const App = () => {
         </div>
       </div>
 
-      <footer className={`bg-gray-600 ${styles.paddingX} ${styles.paddingY} ${styles.flexStart}`}>
+      <footer className={`bg-[#030411] ${styles.paddingX} ${styles.paddingY} ${styles.flexStart}`}>
         <div className={`${styles.boxWidth} flex justify-center`}>
           <Footer />
         </div>
