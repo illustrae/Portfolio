@@ -41,11 +41,11 @@ const App = () => {
             <Hero />
         </section>
 
-        <section id='hm-projects' className={`file:flex bg-[#030411] sm:items-center sm:justify-center sm:h-screen ${styles.flexStart}`}>
+        <section id='hm-projects' className={`file:flex bg-[#030411] sm:items-center sm:justify-center sm:h-full ${styles.flexStart}`}>
             <Projects />
         </section>
 
-        <section id='hm-about' className={`file:flex bg-[#05030cc9] sm:items-center sm:justify-center sm:h-screen ${styles.flexStart}`}>
+        <section id='hm-about' className={`file:flex bg-[#05030cc9] sm:justify-center sm:h-screen ${styles.flexStart}`}>
             <About />
         </section>
       </div>
