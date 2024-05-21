@@ -157,7 +157,6 @@
 }
 
 .circles {
-  /* position: relative; */
   transform: translate(-50%, -50%);
 }
 
@@ -233,7 +232,19 @@
 hr {
     height: 2px; 
     width: 30%; 
-    background-color: #c0c0c0; /* Set the color */
+    background-color: #c0c0c0; 
     border: none; 
-    margin: 10px 1px; /* Adjust margin for centering */
+    margin: 10px 1px; 
   }
+
+
+/* Project images hover effect */
+
+.project-img {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+.project-img:hover {
+    filter: none;
+}

@@ -1,7 +1,6 @@
 import { React } from 'react'
-import { github } from '../assets'
-import { UilBracketsCurly, UilMobileVibrate, UilDataSharing } from '@iconscout/react-unicons'
-import { aisopProject, docuComp, rickMorty, passGen, dataViz } from '../assets'
+import { UilBracketsCurly, UilMobileVibrate, UilDataSharing,  UilLink } from '@iconscout/react-unicons';
+import { aisopProject, docuComp, rickMorty, passGen, dataViz } from '../assets';
 
 const Projects = () => {
     const posts = [
@@ -9,31 +8,36 @@ const Projects = () => {
             title: "AIsop Adventure",
             image: aisopProject,
             content: "OpenAI, Vite-React - Frontend, Python/Flask - Backend, Redux, MySQL, Tailwindcss, Git",
-            link: 'https://Aisop.io'
+            link: 'https://Aisop.io',
+            icon: <UilLink/>,
         },
         {
             title: "Rick & Morty Trivia",
             image: rickMorty,
             content: "Triva game with User Score Board. RestAPI, Vite-React, Tailwindcss, NoSQL, Frontend and Backend Validations. Login and Reg Authentication.",
-            link: 'https://github.com/illustrae/RnMTriviaGame'
+            link: 'https://github.com/illustrae/RnMTriviaGame',
+            icon: <UilLink />,
         },
         {
             title: "DataViz",
             image: dataViz,
             content: "Application to Clean Dataframes with a friendly UI for easy use.",
-            link: 'https://github.com/justinacgray/DataViz_Project'
+            link: 'https://github.com/justinacgray/DataViz_Project',
+            icon: <UilLink />,
         },
         {
             title: "Internal Dev Portal",
             image: docuComp,
             content: "Company Documentation Site",
-            link: 'https://sojourn-dev-portal.vercel.app'
+            link: 'https://sojourn-dev-portal.vercel.app',
+            icon: <UilLink />,
         },
         {
             title: "Password Generator",
             image: passGen,
             content: "Generate and manage secure passwords with desktop GUI",
-            link: 'https://github.com/illustrae/Password-Gen'
+            link: 'https://github.com/illustrae/Password-Gen',
+            icon: <UilLink />,
         },
 
     ];
@@ -75,7 +79,7 @@ const Projects = () => {
                             const textColor = key === 0 ? 'text-[#000000]' : 'text-[#24a9c0]';
 
                             return (
-                                <div className={`w-full bg-[${key === 0 ? '#24a9c0' : '#2c2d3f'}] shadow-md rounded-2xl py-4  px-2 lg:max-w-sm border border-[#24a9c0]`} key={key}>
+                                <div className={`w-full bg-[${key === 0 ? '#24a9c0' : '#2c2d3f'}] shadow-md rounded-2xl py-4  px-4 lg:max-w-sm border border-[#24a9c0]`} key={key}>
                                     <div className="flex justify-end w-full ">
                                         <div className="text-[32px] text-[#181822] mb-6">
                                             {items.id}
@@ -86,12 +90,12 @@ const Projects = () => {
                                     ) : (
 
                                         <div className="flex items-center">
-                                            <div className="ml-4 text-[32px] text-white ">
+                                            <div className="text-[32px] text-white ">
                                                 {items.icon}
                                             </div>
                                         </div>
                                     )}
-                                    <div className="h-[120px] lg:m-2 sm:mt-3">
+                                    <div className="h-[120px] sm:mt-3">
                                         <h4 className={`${textColor} text-xl mb-2 text-left font-semibold`}>
                                             {items.title}
                                         </h4>
@@ -114,25 +118,25 @@ const Projects = () => {
                             Creative <span className='text-gradient'> Endeavors. </span>
                         </p>
                     </div>
-                    <div id='' className="grid gap-6 p-8 -mt-4 lg:grid-cols-3 rounded-2xl place-items-center">
+                    <div id='' className="grid gap-6 p-6 -mt-4 lg:grid-cols-3 rounded-2xl place-items-center">
 
                         {posts.map((items, key) => {
                             return (
                                 <div className="w-full bg-[#0c0d1b] shadow-md rounded-2xl lg:max-w-sm border border-[#24a9c0]" key={key}>
 
-                                    <img className="object-cover w-full h-auto rounded-1xl" src={items.image} alt="image" />
-                                    <div className="h-auto p-2 lg:m-2 sm:mt-3">
+                                    <img className="object-cover w-full project-img rounded-1xl" src={items.image} alt="image" />
+                                    <div className="h-[150px] p-2 lg:m-2 sm:mt-3">
 
                                         <h4 className="text-xl drop-shadow-md mb-2 text-left font-semibold text-[#24a9c0]">
                                             {items.title}
                                         </h4>
 
-                                        <p className="mb-2 text-[#c0c0c0] text-[12px] h-[40px] leading-normal">
+                                        <p className="mb-4 text-[#c0c0c0] text-[12px] leading-normal ">
                                             {items.content}
                                         </p>
 
-                                        <a href={items.link} target="_blank" rel="noopener noreferrer" className='relative inset-x-1 sm:top-2'>
-                                            <img src={github} className='w-[40px]' />
+                                        <a href={items.link} target="_blank" rel="noopener noreferrer" className='relative inset-x-1 sm:top-1 text-[#24a9c0]'>
+                                            {items.icon}
                                         </a>
                                     </div>
                                 </div>
