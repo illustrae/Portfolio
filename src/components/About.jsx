@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { me } from "../assets";
 import { UilLink } from "@iconscout/react-unicons";
+import { resume } from "../assets"
 
 const About = () => {
   const { scrollYProgress } = useScroll();
@@ -42,14 +43,23 @@ const About = () => {
                 eager to find new opportunities to grow and contribute to a
                 dynamic team. Let's build something great together!
               </p>
-              <div className="flex">
-                <p className="text-[#24a9c0] my-4 font-semibold">
+              <div className="flex flex-col items-center justify-around md:my-4 sm:my-2 sm:flex-row sm:justify-start">
+                <p className="text-[#24a9c0] font-semibold">
                   <a href="https://www.linkedin.com/in/traehughes/">
                     <UilLink />
                   </a>
                 </p>
-                <p className="text-[#c0c0c0] my-4 ml-1">linkedIn</p>
+                <p className="text-[#c0c0c0] my-4 ml-1">LinkedIn</p>
+                <a href={resume} download="Traes-Resume" target="_blank" rel="noreferrer" className='block lg:hidden w-[80px] h-[20px] self-center'>
+                  <button className='flex bg-[#24a9c0] hover:bg-[#808f85] text-gray-800 text-[16px] h-[30px] font-bold py-1 px-2 rounded-full items-center justify-center'>
+                    <svg className="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                      <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+                    </svg>
+                    <span>Resume</span>
+                  </button>
+                </a>
               </div>
+
             </div>
           </div>
         </section>
