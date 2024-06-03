@@ -8,8 +8,8 @@ const About = () => {
   const scale = useTransform(scrollYProgress, [0, 1], [0.1, 1]);
 
   return (
-    <div className="flex items-center justify-center w-full h-screen p-7 md:mt-10">
-      <div className="flex flex-col justify-center mx-auto">
+    <div className="flex items-center justify-center w-full sm:h-screen p-7">
+      <div className="flex flex-col justify-center mx-auto ">
         <section id="about">
           <div className="flex flex-col items-center justify-center w-full md:flex-row">
             <div className="w-full md:w-[50%] flex justify-center mb-5  md:mb-0 align-right">
@@ -27,7 +27,7 @@ const About = () => {
               <h3 className="text-gradient text-[24px] font-semibold">
                 The Developer.
               </h3>
-              <div className="flex my-4">
+              <div className="flex items-center justify-center my-4 sm:flex-row sm:items-start sm:justify-start">
                 <p className="text-[#fff] text-[12px] font-semibold bg-[#24a9c0] rounded-full mr-2 px-2 py-1">
                   Web Development
                 </p>
