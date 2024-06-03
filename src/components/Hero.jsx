@@ -14,7 +14,7 @@ const Hero = () => {
     <>
       <section id='home' className={`flex md:flex-row flex-col  sm:flex lg:ml-0 sm:ml-[100px] sm:justify-center mt-64`}>
 
-        <div className={`flex-1 flex-col md:ml-20 lg:ml-20 xl:px-0 sm:px-10 px-4`}>
+        <div className={`flex-1 flex-col xl:px-0 sm:px-10 px-4`}>
 
           <div className='flex justify-center '>
             <p className='text-[#c0c0c0] text-[30px] font-semibold'>

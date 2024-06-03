@@ -59,7 +59,7 @@ const App = () => {
         </div>
       </div>
 
-      <footer className={`bg-[#030411] ${styles.paddingX} ${styles.paddingY} ${styles.flexStart}`}>
+      <footer className={`bg-[#24a9c0] ${styles.paddingX} ${styles.paddingY} ${styles.flexStart}`}>
         <div className={`${styles.boxWidth} flex justify-center`}>
           <Footer />
         </div>
