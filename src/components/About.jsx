@@ -37,11 +37,11 @@ const About = () => {
                 </p>
               </div>
               <p className="text-[#c0c0c0]">
-                Hi, I'm based in Austin and specialize in web and mobile
+                Hi, I'm based in Austin, Tx and specialize in web and mobile
                 development. I'm passionate about creating user-friendly and
                 efficient digital solutions. With my skills and dedication, I'm
                 eager to find new opportunities to grow and contribute to a
-                dynamic team. Let's build something great together!
+                dynamic team.
               </p>
               <div className="flex flex-col items-center justify-around md:my-4 sm:my-2 sm:flex-row sm:justify-start">
                 <p className="text-[#24a9c0] font-semibold">
